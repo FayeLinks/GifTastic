@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>gifTastic</title>
+
+<!-- Bootstrap Link -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<!-- Google Fonts -->
+
+
+<!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+
+    <!-- Container that wraps everything in html -->
+    <div class= "container">
+
+    <!-- Div Row to contain all the dumped buttons -->
+    <div class= "row">
+        <div class= "col-lg-12">
+            <div id= "buttons-view"></div>
+            <br>
+        </div>
+    </div>
+
+    <!-- Row/Col to contain all the generated gifs and ratings in a table format-->
+    <div class= "row">
+        <div class= "col-lg-8">
+            
+                    <!-- Generated Ratings and Gifs are stored here -->
+                    <div id="gifs-view"></div>
+        </div>
+    
+
+
+    <!-- Row/Col for user text input field and submit button -->
+        <div class= "col-lg-4">
+                <form id="feelings-form">
+                    <label for="feelings-input">Add a Big Mood: </label>
+                    <input type="text" id="feelings-input">
+                        <br>
+                  
+                    <!-- Button triggers new feeling to be added -->
+                    <input id="add-feelings" type="submit" value="Submit">
+                </form>
+    </div>
+        </div>
+    
+        
+
+
+
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Javascript -->
+<script type="text/javascript" src="assets/javascript/app.js"></script>
+    </div>
+</body>
+</html>
