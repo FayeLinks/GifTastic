@@ -1,14 +1,62 @@
-.col-lg-4 {
-    background-color: brown;
+body {
+    padding: 3%;
+    background-image: url("../images/colortheory.jpg");
+    background-size: auto;
 }
-
-.col-lg-8 {
-    background-color: blue;
+h1 {
+    font-family: 'Righteous', cursive;
+    font-size: 80px;
+    color: black;
+    text-decoration: underline;
 }
-
-.col-lg-12 {
-    background-color: orange;
+p {
+    font-family: 'Bevan', cursive;
+    font-size: 20px;
 }
-#gifs-view {
+div.gallery img {
+    width: auto;
+    height: auto;
+    display: inline;
+  }
+.responsive {
+    padding: 2px 2px;
     float: left;
-}
+    width: 24.9999%;
+  }
+
+  #gifs-view {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(8, auto);
+    grid-gap: 3px;
+    object-fit: cover;
+  }
+  label {
+      color: rgb(12, 1, 22);
+      font-family: 'Righteous', cursive;
+      font-size: 40px;
+  }
+  #add-feelings {
+      background-color: rgb(134, 22, 116);
+      font-family: 'Lemonada', cursive;
+      font-size: 20px;
+      color: white;
+      height: 60px;
+      width: 100px;
+  }
+.feel-btn {
+      background-color: rgb(245, 242, 78);
+      color: black;
+      font-family: 'Bevan', cursive;
+      font-size: 20px;
+  }
+  .feel-btn:hover {
+    background-color: rgb(90, 209, 35);
+  color: white;
+  }
+
+/* font-family: 'Righteous', cursive;
+font-family: 'Alfa Slab One', cursive;
+font-family: 'Bevan', cursive;
+font-family: 'Lemonada', cursive;
+font-family: 'Prosto One', cursive; */

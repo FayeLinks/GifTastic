@@ -1,10 +1,10 @@
-// https://api.giphy.com/v1/gifs/trending?api_key=sza4Oh4lJwtdkkmcKgnuiZGKUwCsYTZC&limit=15&=PG
+$(document).ready(function() {
 
-var feelings = ["Afraid", "Grateful", "Confused","Regret", "Stressed", "Annoyed","Happiness", "Jealous", "Confident","Offended", "Disturbed", "Guilt", "Bored", "Love", "Depressed", "Frustrated", "Disgust", "Angry", "Disappointed"];
+var feelings = ["Hangry", "Afraid", "Grateful", "Confused","Regret", "Stressed", "Annoyed","Happy", "Jealous", "Confident","Offended", "Disturbed", "Guilt", "Bored", "Sassy", "Love", "Depressed", "Frustrated", "Disgust", "Angry", "Disappointed"];
 
 function displayBigMood() {
     var emotion = $(this).attr("data-name");
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + emotion + "&api_key=sza4Oh4lJwtdkkmcKgnuiZGKUwCsYTZC";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + emotion + "&api_key=sza4Oh4lJwtdkkmcKgnuiZGKUwCsYTZC&limit=10&rating=PG";
 
     // Create an AJAX call to the Giphy site
     $.ajax({
@@ -20,7 +20,7 @@ function displayBigMood() {
         for (var i = 0; i < results.length; i++) {
 
             // Creating a div to hold the movie
-        var gifsDiv = $("<div class= 'emotion'>");
+        var gifsDiv = $("<div class= 'col-lg-10'>");
 
         // Creating a variable to hold the API call 
         var rating = results[i].rating;
@@ -34,6 +34,7 @@ function displayBigMood() {
 
         // Create img tag so that the gif image can be displayed
         var showImage = $("<img>");
+        //var showImage = $("<div class='col-md-4'>");
 
 
         // Creating a variable that specifies the text that will appear in the DOM
@@ -68,6 +69,7 @@ function renderButtons() {
     for (var i = 0; i < feelings.length; i++) {
         var feel = $("<button>");
         feel.addClass("feel-btn");
+        feel.attr("id", "show");
         feel.attr("data-name", feelings[i]);
         feel.text(feelings[i]);
         $("#buttons-view").append(feel);
@@ -80,9 +82,30 @@ $("#add-feelings").on("click", function(event) {
      var emotion = $("#feelings-input").val().trim();
      feelings.push(emotion);
 
+     $("#feelings-input").val("");
+     renderButtons();
+
      renderButtons();
 });
 
 $(document).on("click", ".feel-btn", displayBigMood);
 
 renderButtons();
+
+$(document).on("click", ".feelingGiph", pausePlayGifs);
+
+function pausePlayGifs() {
+    var state = $(this).attr("data-state");
+
+        if (state === "still") {
+            $(this).attr("src", $(this).attr("data-animate"));
+            $(this).attr("data-state", "animate");
+        }
+        else {
+            $(this).attr("src", $(this).attr("data-still"));
+            $(this).attr("data-state", "still");
+        }
+}
+
+
+});

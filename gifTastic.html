@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 <!-- Google Fonts -->
-
+<link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Bevan|Lemonada|Prosto+One|Righteous&display=swap" rel="stylesheet">
 
 <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -20,6 +20,34 @@
 
     <!-- Container that wraps everything in html -->
     <div class= "container">
+        <div class= "row">
+            <div class= "col-lg-9">
+                <h1>Mood Giphys</h1>
+<br>
+            <ul>
+               <li><p>Struggling to find the perfect reaction gif?</p></li>
+                <li><p>Click the buttons to display GIPHYs of various emotions!</p></li>
+                <li><p>Click the GIPHYs to pause and play</p></li>
+                <li><p>Search to add more buttons!</p></li>
+            </ul>
+            </div>
+<br>           
+            <!-- Row/Col for user text input field and submit button -->
+            <div class= "col-lg-3">
+                <form id="feelings-form">
+                    <label for="feelings-input"><strong>Add a Big Mood:</strong></label>
+                    <input type="text" id="feelings-input">
+<br>
+            <!-- Button triggers new feeling to be added -->
+                <input id="add-feelings" type="submit" value="Submit">
+                </form>
+            </div>
+                    
+        </div>
+
+        
+
+<br>
 
     <!-- Div Row to contain all the dumped buttons -->
     <div class= "row">
@@ -27,33 +55,26 @@
             <div id= "buttons-view"></div>
             <br>
         </div>
+        
     </div>
 
-    <!-- Row/Col to contain all the generated gifs and ratings in a table format-->
+    <!-- Row/Col to contain all the generated gifs and ratings-->
     <div class= "row">
-        <div class= "col-lg-8">
-            
+        <div class= "col-lg-12">
+
+                <div class="responsive">
+                        <div class="gallery">
                     <!-- Generated Ratings and Gifs are stored here -->
                     <div id="gifs-view"></div>
+                        </div>
+                      </div>
+
+                      <div class="clearfix"></div>
+            
         </div>
     
-
-
-    <!-- Row/Col for user text input field and submit button -->
-        <div class= "col-lg-4">
-                <form id="feelings-form">
-                    <label for="feelings-input">Add a Big Mood: </label>
-                    <input type="text" id="feelings-input">
-                        <br>
-                  
-                    <!-- Button triggers new feeling to be added -->
-                    <input id="add-feelings" type="submit" value="Submit">
-                </form>
-    </div>
         </div>
     
-        
-
 
 
 
