@@ -14,16 +14,9 @@ p {
     font-size: 20px;
 }
 div.gallery img {
-    width: auto;
-    height: auto;
-    display: inline;
+  border: 5px solid black;
+  display: inline-flexbox;
   }
-.responsive {
-    padding: 2px 2px;
-    float: left;
-    width: 24.9999%;
-  }
-
   #gifs-view {
     display: grid;
     grid-template-columns: repeat(3, auto);
@@ -32,7 +25,7 @@ div.gallery img {
     object-fit: cover;
   }
   label {
-      color: rgb(12, 1, 22);
+      color: black;
       font-family: 'Righteous', cursive;
       font-size: 40px;
   }
@@ -54,9 +47,7 @@ div.gallery img {
     background-color: rgb(90, 209, 35);
   color: white;
   }
-
-/* font-family: 'Righteous', cursive;
-font-family: 'Alfa Slab One', cursive;
-font-family: 'Bevan', cursive;
-font-family: 'Lemonada', cursive;
-font-family: 'Prosto One', cursive; */
+.wrapper {
+  border: 10px solid black;
+  width: 100%;
+}
