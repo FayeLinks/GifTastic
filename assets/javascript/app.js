@@ -19,8 +19,8 @@ function displayBigMood() {
 
         for (var i = 0; i < results.length; i++) {
 
-            // Creating a div to hold the movie
-        var gifsDiv = $("<div class= 'col-lg-10'>");
+            // Creating a div to hold the results
+        var gifsDiv = $("<div class= 'col-lg-12'>");
 
         // Creating a variable to hold the API call 
         var rating = results[i].rating;
@@ -34,7 +34,6 @@ function displayBigMood() {
 
         // Create img tag so that the gif image can be displayed
         var showImage = $("<img>");
-        //var showImage = $("<div class='col-md-4'>");
 
 
         // Creating a variable that specifies the text that will appear in the DOM
