@@ -1,90 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>gifTastic</title>
 
-<!-- Bootstrap Link -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Bootstrap Link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Bevan|Lemonada|Prosto+One|Righteous&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Bevan|Lemonada|Prosto+One|Righteous&display=swap"
+        rel="stylesheet">
 
-<!-- CSS Stylesheet -->
+    <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
+
 <body>
 
     <!-- Container that wraps everything in html -->
-    <div class= "container">
+    <div class="container">
         <div class="wrapper">
-        <div class= "row">
-            <div class= "col-lg-9">
-                <h1>Mood Giphys</h1>
-<br>
-            <ul>
-               <li><p>Struggling to find the perfect reaction gif?</p></li>
-                <li><p>Click the buttons to display GIPHYs of various emotions!</p></li>
-                <li><p>Click the GIPHYs to pause and play</p></li>
-                <li><p>Search to add more buttons!</p></li>
-            </ul>
+            <div class="row">
+                <div class="col-lg-9">
+                    <h1>Mood Giphys</h1>
+                    <br>
+                    <ul>
+                        <li>
+                            <p>Struggling to find the perfect reaction gif?</p>
+                        </li>
+                        <li>
+                            <p>Click the buttons to display GIPHYs of various emotions!</p>
+                        </li>
+                        <li>
+                            <p>Click the GIPHYs to pause and play</p>
+                        </li>
+                        <li>
+                            <p>Search to add more buttons!</p>
+                        </li>
+                    </ul>
+                </div>
+                <br>
+                <!-- Row/Col for user text input field and submit button -->
+                <div class="col-lg-3">
+                    <form id="feelings-form">
+                        <label for="feelings-input">Add a Big Mood: </label>
+                        <input type="text" id="feelings-input">
+                        <br>
+
+                        <!-- Button triggers new feeling to be added -->
+                        <input id="add-feelings" type="submit" value="Submit">
+                    </form>
+                </div>
+
             </div>
-<br>           
-            <!-- Row/Col for user text input field and submit button -->
-            <div class= "col-lg-3">
-                <form id="feelings-form">
-                    <label for="feelings-input"><strong>Add a Big Mood:</strong></label>
-                    <input type="text" id="feelings-input">
-<br>
-            <!-- Button triggers new feeling to be added -->
-                <input id="add-feelings" type="submit" value="Submit">
-                </form>
+        </div>
+
+
+
+        <br>
+
+        <!-- Div Row to contain all the dumped buttons -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div id="buttons-view"></div>
+                <br>
             </div>
-                    
+
         </div>
-        </div>
 
-        
-
-<br>
-
-    <!-- Div Row to contain all the dumped buttons -->
-    <div class= "row">
-        <div class= "col-lg-12">
-            <div id= "buttons-view"></div>
-            <br>
-        </div>
-        
-    </div>
-
-    <!-- Row/Col to contain all the generated gifs and ratings-->      
-    <div class="container-fluid"> 
-    <div class= "row"></div>
-        <div class= "col-lg-12">
+        <!-- Row/Col to contain all the generated gifs and ratings-->
+        <div class="container-fluid">
+            <div class="row"></div>
+            <div class="col-lg-12">
 
                 <div class="responsive">
-                        <div class="gallery">
-                    <!-- Generated Ratings and Gifs are stored here -->
-                    <div id="gifs-view"></div>
-                        </div>
-                      </div>
+                    <div class="gallery">
+                        <!-- Generated Ratings and Gifs are stored here -->
+                        <div id="gifs-view"></div>
+                    </div>
+                </div>
 
-                      <div class="clearfix"></div>
-            
+                <div class="clearfix"></div>
+
+            </div>
+
         </div>
-    
-        </div>
-    </div> 
-    
+    </div>
 
-<!-- jQuery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<!-- Javascript -->
-<script type="text/javascript" src="assets/javascript/app.js"></script>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
     </div>
 </body>
+
 </html>

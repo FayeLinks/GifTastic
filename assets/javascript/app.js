@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-var topics = ["Hangry", "Afraid", "Grateful", "Confused","Regret", "Stressed", "Annoyed","Happy", "Jealous", "Confident","Offended", "Disturbed", "Guilt", "Bored", "Sassy", "Love", "Depressed", "Frustrated", "Disgust", "Angry", "Disappointed"];
+var feelings = ["Hangry", "Afraid", "Grateful", "Confused","Regret", "Stressed", "Annoyed","Happy", "Jealous", "Confident","Offended", "Disturbed", "Guilt", "Bored", "Sassy", "Love", "Depressed", "Frustrated", "Disgust", "Angry", "Disappointed"];
 
 function displayBigMood() {
     var emotion = $(this).attr("data-name");
@@ -61,28 +61,26 @@ function displayBigMood() {
     });
 }
 
-// Function to display already rendered strings in the topics array and display labeled buttons in "buttons-view" section of html
+// Function to display already rendered strings in the feelings array and display labeled buttons in "buttons-view" section of html
 function renderButtons() {
     $("#buttons-view").empty();
 
-    for (var i = 0; i < topics.length; i++) {
+    for (var i = 0; i < feelings.length; i++) {
         var feel = $("<button>");
         feel.addClass("feel-btn");
-        feel.attr("id", "show");
-        feel.attr("data-name", topics[i]);
-        feel.text(topics[i]);
+        feel.attr("data-name", feelings[i]);
+        feel.text(feelings[i]);
         $("#buttons-view").append(feel);
     }
 }
 
-// Submit button click event takes the user feeling from form input, trims and pushes it to the topics array. It then creates and displays a labled button
-$("#add-topics").on("click", function(event) {
+// Submit button click event takes the user feeling from form input, trims and pushes it to the feelings array. It then creates and displays a labled button
+$("#add-feelings").on("click", function(event) {
      event.preventDefault();
-     var emotion = $("#topics-input").val().trim();
-     topics.push(emotion);
-
-     $("#topics-input").val("");
-     renderButtons();
+     var emotion = $("#feelings-input").val().trim();
+     feelings.push(emotion);
+     document.getElementById("feelings-input").value = "";
+     
 
      renderButtons();
 });
